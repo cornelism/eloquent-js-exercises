@@ -3,9 +3,15 @@ console.log('--------');
 
 var arr = [];
 
-var range = function range(start, end) {
-  for (var a = start; a <= end ; a++ ) {
-    arr.push(a);
+var range = function range(start, end, step) {
+  if(step && step != 0) {
+     for (var a = end; a >= start; a = a+step ) {
+      arr.push(a);
+     }
+  } else {
+    for (var a = start; a <= end; a++ ) {
+      arr.push(a);
+    }
   }
   return arr;
 }
@@ -18,7 +24,7 @@ var sum = function sum(arr) {
   return x;
 }
 
-console.log(range(1,10));
+console.log(range(1,26,-4));
 console.log(sum(arr));
 
 console.log('');
