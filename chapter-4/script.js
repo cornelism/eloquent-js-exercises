@@ -1,22 +1,20 @@
 console.log('The sum of a range');
-console.log('--------');
 
 var arr = [];
 
 var start;
 var end;
+var direction;
 
 var range = function range(nr1, nr2, step) {
 	
 	// as of http://stackoverflow.com/questions/1232040/how-to-empty-an-array-in-javascript
-	// the fastest way to clear an array is the following:
+	// the fastest way to clear an array is by setting an array's length to 0
 	arr.length = 0;
 	
 	check(nr1,nr2);
-	
-	
-	
-/*	if (step && step!=0){
+
+	if (step && step!=0){
 		// negative step
 		if (step < 0) {
 			for (var a = end; a >= start; a = a+step ) {
@@ -35,22 +33,21 @@ var range = function range(nr1, nr2, step) {
 			arr.push(a);
 		}
 	}
-	return arr;*/
+	console.log(arr);
+	return arr;
 }
 
 var check = function check(number1,number2){
-/*	console.log(number1);
-	console.log(number2);*/
-	
 	if(number1!=number2) {
-		/*console.log('they are diff');*/
 		if (number1 < number2) {
 			console.log('start is smaller than end');
+			direction = 'up';
 			start = number1;
 			end = number2;
 		}
 		if (number1 > number2) {
 			console.log('start is bigger than end');
+			direction = 'down';
 			start = number2;
 			end = number1;
 		}
