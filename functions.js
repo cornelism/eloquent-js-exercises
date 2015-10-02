@@ -6,6 +6,7 @@ function title(txt){
     }
     console.log(txt);
     console.log(string);
+    console.log('');
 }
 
 function end(){
