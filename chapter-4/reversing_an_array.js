@@ -1,3 +1,4 @@
+/*global title*/
 title('4.2: Reversing an array');
 
 /*
@@ -17,7 +18,7 @@ var reverseArray = function reverseArray(arr) {
         arr2.unshift(arr[a]);
     }
     return arr2;
-}
+};
 
 // The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument in order to reverse its elements.
 var reverseArrayInPlace = function reverseArrayInPlace(arr) {
@@ -30,10 +31,13 @@ var reverseArrayInPlace = function reverseArrayInPlace(arr) {
 
     }
     return arr;
-}
+};
 
 console.log(reverseArray(["A", "B", "C"]));
 var arrayValue = [1, 2, 3, 4, 5];
 
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
+
+/*global end*/
+end();

@@ -1,3 +1,4 @@
+/*global title*/
 title('4.1: The sum of a range');
 
 var arr = [];
@@ -35,7 +36,7 @@ var range = function range(nr1, nr2, step) {
 		}
 	}
 	return arr;
-}
+};
 
 // Next, write a sum function that takes an array of numbers and returns the sum of these numbers. Run the previous program and see whether it does indeed return 55.
 var sum = function sum(arr) {
@@ -44,8 +45,9 @@ var sum = function sum(arr) {
     x = x + arr[a];
   }
   return x;
-}
+};
 
 console.log(sum(range(286,180,-17)));
 
+/*global end*/
 end();
