@@ -1,8 +1,6 @@
-console.log('The sum of a range');
+title('4.1: The sum of a range');
 
 var arr = [];
-var start;
-var end;
 
 // Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.
 var range = function range(nr1, nr2, step) {
@@ -49,3 +47,5 @@ var sum = function sum(arr) {
 }
 
 console.log(sum(range(286,180,-17)));
+
+end();
