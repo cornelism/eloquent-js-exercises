@@ -1,4 +1,4 @@
-/*console.log('The sum of a range');*/
+console.log('The sum of a range');
 
 var arr = [];
 var start;
@@ -8,7 +8,8 @@ var end;
 var range = function range(nr1, nr2, step) {
 	// as of http://stackoverflow.com/questions/1232040/how-to-empty-an-array-in-javascript, the fastest way to clear an array is by setting an array's length to 0
 	arr.length = 0;
-	var b = 0;
+	var a;
+	var b = 0;	// step var for function
 
 	//determine which direction the step is
 	if (step && step!=1) {
@@ -18,24 +19,23 @@ var range = function range(nr1, nr2, step) {
 	}
 
 	if (b > 0 && nr1 < nr2) {
-		for(var a = nr1; a <= nr2; a=a+b) {
+		for(a = nr1; a <= nr2; a=a+b) {
 			arr.push(a);
 		}
 	} else if (b > 0 && nr1 > nr2) {
-		for(var a = nr2; a <= nr1; a=a+b) {
+		for(a = nr2; a <= nr1; a=a+b) {
 			arr.push(a);
 		}
 	// negative step
 	} else if (b < 0 && nr1 > nr2) {
-		for(var a = nr1; a >= nr2; a=a+b) {
+		for(a = nr1; a >= nr2; a=a+b) {
 			arr.push(a);
 		}
 	} else if (b < 0 && nr1 < nr2) {
-		for(var a = nr2; a >= nr1; a=a+b) {
+		for(a = nr2; a >= nr1; a=a+b) {
 			arr.push(a);
 		}
 	}
-
 	return arr;
 }
 
@@ -48,4 +48,4 @@ var sum = function sum(arr) {
   return x;
 }
 
-console.log(sum(range(8,18,-2)));
+console.log(sum(range(286,180,-17)));
